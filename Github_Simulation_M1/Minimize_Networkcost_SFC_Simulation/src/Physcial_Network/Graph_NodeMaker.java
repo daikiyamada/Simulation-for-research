@@ -18,12 +18,16 @@ public class Graph_NodeMaker {
             cap=NodeCap();
             cost = NodeCost();
             if(type_node ==0&&nums<=num_Service){
-                MyNode n = new MyNode("Service",cap,cost,0);
+                MyNode n = new MyNode("Service",cap,cost,0,a);
                 Graph.addVertex(n);
+                nums++;
+                a++;
             }
             else if(type_node==1&&numt<=num_Terminal){
-                MyNode n = new MyNode("Terminal",0,0,0);
+                MyNode n = new MyNode("Terminal",0,0,0,a);
                 Graph.addVertex(n);
+                numt++;
+                a++;
             }
         }
         return Graph;

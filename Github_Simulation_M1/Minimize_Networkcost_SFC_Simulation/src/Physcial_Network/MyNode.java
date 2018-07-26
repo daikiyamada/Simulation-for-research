@@ -7,14 +7,20 @@ import javax.xml.soap.Node;
  */
 public class MyNode {
     public String Node_ID; /**NodeId*/
+    public int Node_num;
     public int Node_Capacity; /**計算キャパシティ*/
     public int Node_Cost; /**配置コスト*/
     public int Node_Residual_Capacity; /**残余キャパシティ*/
 
-    public MyNode(String Node_ID,int Node_Capacity,int Node_Cost,int Node_Residual_Capacity){
+    public MyNode(String Node_ID,int Node_Capacity,int Node_Cost,int Node_Residual_Capacity,int Node_num){
         this.Node_ID = Node_ID;
         this.Node_Capacity = Node_Capacity;
         this.Node_Cost = Node_Cost;
         this.Node_Residual_Capacity = Node_Residual_Capacity;
+        this.Node_num = Node_num;
+    }
+    @Override
+    public String toString(){
+        return Node_ID+Node_num;
     }
 }
